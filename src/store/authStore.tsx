@@ -10,7 +10,7 @@ interface AuthState {
 
 const useAuthStore = create<AuthState>((set) => ({
   // State - check localStorage for authToken on initialization
-  isAuthenticated: !!localStorage.getItem('authToken'),
+  isAuthenticated: typeof window !== 'undefined' ? !!localStorage.getItem('authToken') : false,
 
   // Actions
   login: (token: string) => {

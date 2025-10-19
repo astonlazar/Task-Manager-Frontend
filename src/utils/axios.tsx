@@ -1,4 +1,4 @@
-
+"use client"
 
 import axios, { AxiosInstance, InternalAxiosRequestConfig, AxiosResponse } from "axios";
 
