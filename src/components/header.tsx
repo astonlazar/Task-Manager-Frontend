@@ -10,15 +10,15 @@ const Header = ({ handleCreateClick }: { handleCreateClick: () => void }) => {
     <div className="bg-gray-900 rounded-lg shadow-lg p-6 mb-6">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-3xl font-bold text-gray-300">Task Manager</h1>
+          <h1 className="text-2xl font-bold text-gray-300">Task Manager</h1>
           <p className="text-gray-200 mt-1">Organize your tasks efficiently</p>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col md:flex-row items-center gap-4">
           <button
             onClick={handleCreateClick}
             className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition-colors"
           >
-            <Plus size={20} />
+            <Plus size={20} className="max-md:hidden" />
             New Task
           </button>
           {isAuthenticated ? (
